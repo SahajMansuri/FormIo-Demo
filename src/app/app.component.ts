@@ -13,7 +13,7 @@ export class AppComponent implements OnInit, DoCheck{
   ngDoCheck(): void {
     setTimeout(() => {
       const els = document.querySelectorAll(
-        'div[style*="z-index: 999999999"]'
+        'div[style*="background-color: rgba(0, 0, 0, 0.5)"]'
       );
       els.forEach((e) => {
         e.remove();
@@ -22,15 +22,29 @@ export class AppComponent implements OnInit, DoCheck{
   }
   title = 'FormIo';
   ngOnInit(): void {
-      // // Removing Syncfusion premium dialog after 2 seconds
-      setTimeout(() => {
-          const els = document.querySelectorAll(
-              'div[style*="z-index: 999999999"]'
-          );
-          els.forEach((e) => {
-              e.remove();
-          });
-      }, 200);
+        setTimeout(() => {
+      const els = document.querySelectorAll(
+        'div[style*="z-index: 999999999"]'
+      );
+      els.forEach((e) => {
+        e.remove();
+      });
+    }, 200);
+    
   }
+
+//   onChange(event: any) {
+//     console.log(event);
+//     if (['addComponent', 'saveComponent', 'deleteComponent'].indexOf(event.type) > -1) {
+//       setTimeout(() => {
+//         const els = document.querySelectorAll(
+//             'div[style*="z-index: 999999999"]'
+//         );
+//         els.forEach((e) => {
+//             e.remove();
+//         });
+//     }, 0);
+//     }
+//   }
 }
 

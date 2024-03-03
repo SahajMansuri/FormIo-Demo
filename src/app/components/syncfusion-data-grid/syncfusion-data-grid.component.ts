@@ -98,6 +98,10 @@ export class SyncfusionDataGridComponent implements FormioCustomComponent<number
         { field: 'ShipName', headerText: 'Ship Name', width: 150 }
     ];
 
+    rowClick(event: any): void {
+        const selectedRow: any = event.data;
+        alert(`Row ID clicked: ${selectedRow.OrderID}`);
+      }
     @Input()
     value!: number;
   

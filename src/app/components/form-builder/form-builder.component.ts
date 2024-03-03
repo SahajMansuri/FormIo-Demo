@@ -47,14 +47,7 @@ export class FormBuilderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      const els = document.querySelectorAll(
-        'div[style*="z-index: 999999999"]'
-      );
-      els.forEach((e) => {
-        e.remove();
-      });
-    }, 2000);
+
   }
 
 
